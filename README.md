@@ -1,4 +1,4 @@
-# MANIP WB EMG
+# Experiment Whole-body EMG
 
 
 
