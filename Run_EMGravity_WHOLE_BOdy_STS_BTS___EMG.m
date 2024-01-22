@@ -1,13 +1,20 @@
-    
-%% Script -----EMG----- pour manip mvts whole body
-% A executer pour post-traiter les données obtenues lors des manips whole
-% body. Ce script est à utiliser pour les données STS/BTS et WB reaching.
+   
+
+
+
+%% Script -----EMG----- 
+% Script to be used to compute EMG parameters. The script uses files that
+% are already processed regarding the kinematics.
+%%
+
+
+
 
 close all
 clear all
 
-%% Informations sur le traitement des données
-% Données pour le traitement cinématique
+%% Informations on data processing
+% Data for kinematic
 Low_pass_Freq = 5; % Fréquence passe-bas la position pour la cinématique
 Cut_off = 0.1; % Pourcentage du pic de vitesse pour déterminer début et fin du mouvement POUR MVTS RAPIDES
 Ech_norm_kin = 1000; % Fréquence d'échantillonage du profil de vitesse normalisé en durée 
@@ -22,14 +29,13 @@ delay2 = 0;%40; % Nb d'images (Cinématiques) à ajouter pour compenser l'EMD et l
 delay = 0;
 pourcen_amp = 0.05;
 
-% Données pour le traitement EMG
+% EMG constants
 anticip_rap_aller1 = 0.239; % Temps à soustraire lors du recoupage du rms_cut pour trouver le début de la bouffée MVT RAPIDE Aller Pre
 anticip_rap_aller2 = 0.089; % Temps à soustraire lors du recoupage du rms_cut pour trouver le début de la bouffée MVT RAPIDE Aller Post
 anticip_rap_retour1 = 0.239; % Temps à soustraire lors du recoupage du rms_cut pour trouver le début de la bouffée MVT RAPIDE Retour Pre
 anticip_rap_retour2 = 0.089;  % Temps à soustraire lors du recoupage du rms_cut pour trouver le début de la bouffée MVT RAPIDE Reour Post
 anticip2 = 0.075; % Temps à soustraire lors du recoupage du rms_cut pour trouver le début de la bouffée MVT lent 
 emg_frequency = 1000; % Fréquence d'acquisition du signal EMG
-%Nb_averaged_trials = 2; % Indicate the number of EMG traces to be averaged 
 Nb_emgs = 16; % Spécification du nombre de channels EMG
 rms_window = 100; % Time in ms of the window used to compute sliding root mean square of EMG
 rms_window_step = (rms_window/1000)*emg_frequency;
