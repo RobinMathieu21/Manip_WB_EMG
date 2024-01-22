@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This project contains all the codes used for the post-processing of the data.
+This project contains all the codes used for the post-processing of the data presented in a paper (DOI: ).
 It contains several codes that call others, the codes to be run are :
 ### Kinematics:
 - Run_EMGravity_WHOLE_BOdy_STS_BTS_1_kinematics.m : *First script to be runned to check the kinematic data of Whole-body tasks and recut if necessary*
