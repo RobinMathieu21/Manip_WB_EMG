@@ -13,7 +13,7 @@ It contains several codes that call others, the scripts to be run are :
 - Run_EMGravity_WHOLE_BOdy_STS_BTS_1_kinematicsBRAS_TOUS.m : *Second script to be runned on data presviously processed by the code above, to compute main kinematics parameters*
   
 ### EMG:
-- Run_EMGravity_WHOLE_BOdy_STS_BTS___EMG : *Script to be runned to compute EMG data using files created by the kinematic processing*
+- Run_EMGravity_WHOLE_BOdy_STS_BTS___EMG : *Script to be runned to compute EMG data using files created by the kinematic processing (some lines of the script MEAN_TONIC_avec_corrections must be used depending on the group and the task)*
 - Run_EMGravity_WHOLE_BOdy_STS_BTS___EMG__CALCUL_AIRE : *Script to be runned to compute a specific EMG parameter using files created by the code just above*
   
 ### Machine learning:
